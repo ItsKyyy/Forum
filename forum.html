@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+<style>
+    body {
+        font-family: 'Times New Roman', Arial;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("https://i.ibb.co.com/f8RHft7/Cybertown.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation: background-animation 10s infinite;
+    }
+    .form-container {
+        width: 30%;
+        margin: 0 auto;
+        padding: 15px;
+        border: 3px solid rgba(0, 255, 255, 1);
+        border-radius: 10px;
+        background-color: rgba(167, 82, 167, 0.6);
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    label {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 16px; 
+        background-color: rgba(125, 34, 151, 0.5); 
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+        color: #FFFF00; 
+        text-shadow: 0 0 10px #CCFF00;
+        gap: 5px;
+    }
+    input[type='text'], input[type='password'] {
+        width: 90%;
+        padding: 10px;
+        border: 2px solid #25a2ef;
+        border-radius: 5px;
+        background-color: rgba(124, 44, 159, 0.1) !important;
+        font-size: 14px;
+        color: #ff9d00;
+    }
+    select {
+        width: 96.5%;
+        padding: 10px;
+        border: 2px solid #25a2ef;
+        border-radius: 5px;
+        background-color: rgba(124, 44, 159, 0.1);
+        font-size: 14px;
+        color: #ff9d00;
+    }
+    ::placeholder{
+        color: #ff9d00;
+    }
+    select option {
+        color: #000000;
+    }
+    input[type="text"], input[type='password']:focus{
+        border-color: #009bfc;
+        background-color: rgba(206, 113, 247, 0.1);
+    }
+    input[type="submit"] {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #af18f5;
+        color: #ff9900;
+        font-size: 14px;
+        cursor: pointer;
+    }
+    input[type="submit"]:hover {
+        background-color: #9906c9;
+    }
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <Form action="Submitform.html" method="post">
+            <div class="form-group">
+                <label for="username">Username :</label><br>
+                <input type="text" id="username" name="username" required placeholder="Enter Your Password" autocomplete="off">
+            </div>
+        <div class="form-group">
+            <label for="password">Password :</label><br>
+            <input type="password" id="password" name="password" required placeholder="Enter Your Password">
+        </div>
+        <div class="form-group">
+            <label for="favColour">Favorit Colour :</label><br>
+            <select id="favColour" name="favColour" required>
+                <option value="" disabled selected>Select a colour</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="purple">Purple</option>
+                <option value="black">Black</option>
+                <option value="orange">Orange</option>
+                <option value="skyblue">Sky Blue</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="RememberMe">Remember Me</label><br>
+            <input id="rememberChkBox" type="checkbox" required>
+        </div>
+        <input type="submit" value="Submit">
+        </Form>
+    </div>
+</body>
+</html>
